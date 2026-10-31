@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הסל של אמא</title>
+<style>
+:root{--bg:#fbf1e4;--card:#fffaf2;--tx:#3b2a1d;--mu:#8a7360;--ac:#a8472b;--ac2:#f9dccb;--bd:#ebd8c3;--dg:#b3261e;--du:#e8a100;--du2:#fff0bd;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1812;--card:#2a2118;--tx:#f3e6d6;--mu:#b9a28b;--ac:#f08a5d;--ac2:#4a2f22;--bd:#3f3226;--dg:#ff8a7a;--du:#f5c04a;--du2:#46390f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1f1812;--card:#2a2118;--tx:#f3e6d6;--mu:#b9a28b;--ac:#f08a5d;--ac2:#4a2f22;--bd:#3f3226;--dg:#ff8a7a;--du:#f5c04a;--du2:#46390f;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 "Heebo","Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;padding-bottom:210px}
+header{padding:18px 16px 6px}
+h1{margin:0;font-size:26px;font-weight:800;letter-spacing:-.3px}
+h1 small{display:block;font-size:13px;font-weight:400;color:var(--mu)}
+main{padding:0 12px;max-width:640px;margin:0 auto}
+h3{margin:20px 4px 8px;font-size:15px;color:var(--ac);font-weight:700}
+h2{margin:0 0 10px}
+.mu{color:var(--mu)}
+input,select,button{font:inherit;color:inherit}
+input,select{width:100%;padding:11px 12px;margin:0 0 8px;border:1px solid var(--bd);border-radius:10px;background:var(--card)}
+button{border:1px solid var(--bd);background:var(--card);border-radius:10px;padding:10px 14px;cursor:pointer}
+button.pri{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:700}
+html[data-theme="dark"] button.pri{color:#2a1408}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) button.pri{color:#2a1408}}
+.big{width:100%;margin:6px 0 10px;padding:13px}
+.se{margin-top:8px}
+.it{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px;border-inline-start:4px solid var(--bd)}
+.it.soon{border-inline-start-color:var(--du);box-shadow:0 0 0 1px var(--du)}
+.it.due{border-color:var(--du);border-inline-start-color:var(--du);background:var(--du2);box-shadow:0 0 0 2px var(--du),0 0 14px var(--du)}
+.it.on{border-inline-start-color:var(--ac);background:var(--ac2)}
+.rg{margin-inline-start:6px;padding:3px 9px;font-size:12px;border:1px solid var(--du);background:var(--du2);border-radius:8px}
+.rg.ok{background:var(--du);color:#2a1408}
+.st+.rg{margin:6px 0 0}
+.bg{display:inline-block;font-size:12px;margin-top:4px;background:var(--du2);border:1px solid var(--du);border-radius:8px;padding:1px 8px}
+.dn{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:10px 0 0;padding:8px 12px;border-radius:10px;background:var(--du2);border:1px solid var(--du);font-size:14px;font-weight:600}
+.dn button{padding:6px 10px;font-size:13px;white-space:nowrap}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.vr{display:flex;justify-content:space-between;align-items:center;margin-top:6px;padding-top:6px;border-top:1px dashed var(--bd)}
+.st{display:flex;align-items:center;gap:6px;margin-top:6px}
+.vr .st{margin:0}
+.st button{width:40px;height:40px;padding:0;font-size:22px;line-height:1}
+.st span{min-width:72px;text-align:center;font-weight:700}
+.nb{padding:4px 10px;color:var(--mu)}
+.nb.has{color:var(--ac);border-color:var(--ac)}
+.ni{margin:8px 0 0}
+.mr{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+.x{color:var(--dg);padding:6px 11px}
+.row{display:flex;gap:8px;margin:8px 0}
+.row>*{flex:1;text-align:center}
+.btn{border:1px solid var(--bd);background:var(--card);border-radius:10px;padding:10px 14px;cursor:pointer}
+#bar{position:fixed;left:0;right:0;bottom:calc(58px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--bd);padding:8px 10px;display:none;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center}
+#bar span{font-weight:700;width:100%;text-align:center;font-size:14px}
+#bar button{flex:1;padding:10px 6px;font-size:14px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--bd);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav button{flex:1;border:0;border-radius:0;background:none;padding:16px 4px;font-weight:600;color:var(--mu)}
+nav button.a{color:var(--ac);box-shadow:inset 0 3px 0 var(--ac)}
+#m{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);align-items:center;justify-content:center;padding:16px;z-index:9}
+.box{background:var(--card);border-radius:14px;padding:16px;width:100%;max-width:420px;max-height:90%;overflow:auto}
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.sum div{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px}
+.sum b{display:block;font-size:20px}
+.sum small{color:var(--mu)}
+.sc{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}
+th,td{padding:7px 8px;border-bottom:1px solid var(--bd);text-align:start;white-space:nowrap}
+th{color:var(--mu);font-weight:600}
+#t{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-inset-top,0px));margin:auto;width:max-content;max-width:90%;background:var(--tx);color:var(--bg);padding:9px 16px;border-radius:20px;display:none;z-index:10}
+</style>
+</head>
+<body>
+<header><h1>🛒 הסל של אמא<small>רשימת הקנייה החודשית</small></h1></header>
+<main id="main"></main>
+<div id="bar"></div>
+<nav class="tb2"><button data-t="shop" onclick="go('shop')">קנייה</button><button data-t="manage" onclick="go('manage')">מוצרים</button><button data-t="stats" onclick="go('stats')">סטטיסטיקה</button></nav>
+<div id="m"></div><div id="t"></div>
+<script>
+const K='hasal_v1';
+const SEED=`#ביצים ומוצרי חלב
+ביצים (12 באריזה)|אריזות
+קוטג׳|אריזות
+חמאה|אריזות
+חלב 3%|יח׳|1 ליטר,2 ליטר
+שמנת חמוצה|יח׳
+יוגורט יופלה תות 500 גרם|יח׳
+יוגורט תנובה 1.5 ליטר|יח׳
+גבינה צהובה (עמק)|גרם
+גבינה מלוחה קשה|יח׳|חצי קוביה,קוביה
+#בשר ועופות
+עופות|ק״ג|כנפיים,פרגיות,כריים,חזה עוף
+בשר טחון (לא שמן)|ק״ג
+דגים קפואים|יח׳
+#מעדניה וסלטים
+נקניק פסטרמה|גרם
+פסטרמה הודו|גרם
+נקניק סלמי תא|גרם
+נקניקיות|אריזות
+חומוס (אחלה/צבר)|יח׳|אחלה,צבר
+טחינה|אריזות
+סלט חצילים|אריזות
+סלט חציל במיונז|יח׳
+סלט קרוב במיונז|יח׳
+#יבשים ודגנים
+אורז יסמין|אריזות
+פסטה/ספאגתי|אריזות|ארוכה,צורות
+כוסמת|אריזות
+חומוס יבש|אריזות
+שיבולת שועל (צינצנת ברזל)|יח׳
+מרק קמור|יח׳
+קמח (1 ק״ג)|יח׳
+סולת|אריזות
+סוכר|יח׳
+מלח|יח׳
+#אפייה
+אבקת אפייה|אריזות
+סוכר וניל|שקיות
+נייר אפייה|אריזות
+נייר כסף|אריזות
+#שימורים וחמוצים
+טונה שימורים|אריזות
+חמוצים|יח׳|אפונה,תירס,מלפפונים חומץ,מלפפונים מלח,זיתים,גזר עם שעועית ירוקה,פטריות שימורים
+רסק עגבניות (קטן)|אריזות
+#רטבים, שמן ותבלינים
+קטשופ אוסם|יח׳
+מיונז תלמה|יח׳
+ריבה|יח׳|דובדבן,תותים
+דבש (בקבוק לחיץ)|יח׳
+שמן|בקבוקים|קנולה,חמניות
+פלפל שחור|גרם
+כמון|יח׳
+כורכום|יח׳
+פפריקה חריפה|גרם
+#קפה, תה ומתוקים
+קפה שחור טורקי|יח׳
+נס קפה|יח׳
+תה ויסוצקי רגיל (אריזה גדולה)|יח׳
+עוגיות פתי בר|אריזות
+וופל לימון|אריזות
+עוגת הבית שח מט|יח׳
+גלידה (משפחתית)|יח׳
+מנה חמה|יח׳
+סודה לשתייה (שלישייה)|יח׳
+#לחם ומאפים
+לחם|אריזות
+לחמניות|אריזות
+#פירות
+פירות|יח׳|תפוחים אדומים קטנים,בננות,רימונים,מנדרינה,תפוזים,אפרסמון,מלון,נקטרינה,אפרסק
+לימונים|יח׳
+אבוקדו|יח׳
+#ירקות ועשבים
+תפוח אדמה אדום|ק״ג
+בצל|ק״ג
+גזר|יח׳
+חציל|יח׳
+מלפפון|יח׳
+עגבניות|יח׳
+קישואים|יח׳
+גמבה|יח׳
+כרוב|יח׳
+שום|יח׳
+פלפל חריף|יח׳
+בצל ירוק|אריזות
+פטרוזיליה|יח׳
+שמיר|יח׳
+פטריות טריות|אריזות
+#קפואים
+בורקס קפוא|אריזות|תפוחי אדמה,גבינה
+צ׳יפס עבה קפוא|אריזות
+#ניקיון
+מרקחת כביסה|יח׳|סנו,מאג׳יק
+ג׳ל כביסה (צבעוני, 3 ליטר)|יח׳
+סבון כלים (בנו ספארק, לחיץ)|יח׳
+כריות לכלים|אריזות
+אקונומיקה סנו כלור|יח׳
+סבון לאסלה|יח׳
+חומר ניקוי לאסלה ירוק|יח׳
+נייר טואלט (ללא ציור מצנח)|אריזות
+מגבונים|אריזות
+כפפות חד־פעמיות (M, לא שחור)|אריזות
+#טיפוח
+סבון גוף / תחליף רחצה|יח׳
+שמפו לשיער יבש|יח׳
+משחת שיניים|יח׳
+סכין גילוח לנשים|אריזות
+ספיד סטיק לנשים (יבש, ריח תפוח)|יח׳
+#חד־פעמי
+מגשי אלומיניום בינוני|אריזות
+כוסות חד־פעמי|אריזות
+צלחות חד־פעמי|אריזות`;
+const U={'ק״ג':{s:.5,d:1},'גרם':{s:50,d:250}};
+const step=u=>(U[u]||{s:1}).s,def=u=>(U[u]||{d:1}).d;
+function seed(){const cats=[],prods=[];let i=0;SEED.split('\n').forEach(l=>{l=l.trim();if(!l)return;if(l[0]=='#'){cats.push(l.slice(1));return}const a=l.split('|');prods.push({id:'p'+(++i),name:a[0],cat:cats[cats.length-1],unit:a[1]||'יח׳',v:a[2]?a[2].split(','):[]})});return{cats,prods,sel:{},hist:[]}}
+function load(){try{const d=JSON.parse(localStorage.getItem(K));if(d&&d.prods&&d.cats)return d}catch(e){}return seed()}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+let S=load(),tab='shop',q='',open={},od=false;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const prod=id=>S.prods.find(p=>p.id==id);
+const isSel=e=>!!e&&(e.q>0||Object.keys(e.vs||{}).length>0);
+const cnt=()=>S.prods.filter(p=>isSel(S.sel[p.id])).length;
+const ent=id=>S.sel[id]||(S.sel[id]={q:0,vs:{},n:''});
+const nf=n=>Number(n).toLocaleString('he-IL',{maximumFractionDigits:2});
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const hd=iso=>{const [y,m,d]=iso.split('-');return d+'.'+m+'.'+y};
+function toast(t){const e=$('t');e.textContent=t;e.style.display='block';clearTimeout(toast.k);toast.k=setTimeout(()=>e.style.display='none',2200)}
+function modal(h,ok,label){const m=$('m');m.innerHTML='<div class="box">'+h+'<div class="row"><button class="pri" id="mo">'+(label||'אישור')+'</button><button id="mc">ביטול</button></div></div>';m.style.display='flex';$('mc').onclick=()=>m.style.display='none';$('mo').onclick=()=>{if(ok()!==false)m.style.display='none'}}
+function go(t){tab=t;render();window.scrollTo(0,0)}
+function stp(id,i,val,u){return '<div class="st"><button onclick="chg(\''+id+'\','+i+',-1)">−</button><span>'+(val?nf(val)+' '+u:'0')+'</span><button onclick="chg(\''+id+'\','+i+',1)">+</button></div>'}
+function chg(id,i,dir){const p=prod(id),e=ent(id),st=step(p.unit),vn=i<0?null:p.v[i];const cur=vn==null?e.q:(e.vs[vn]||0);let nv=dir>0?(cur?cur+st:def(p.unit)):(cur<=st?0:cur-st);nv=Math.round(nv*100)/100;if(vn==null)e.q=nv;else if(nv)e.vs[vn]=nv;else delete e.vs[vn];if(!isSel(e)&&!e.n)delete S.sel[id];save();list()}
+function nt(id){open[id]=!open[id];list();if(open[id]){const i=document.querySelector('[data-n="'+id+'"]');if(i)i.focus()}}
+function sn(id,v){const e=ent(id);e.n=v;if(!isSel(e)&&!v)delete S.sel[id];save();bar()}
+const mode=a=>{const c={};let b=null,n=0;a.forEach(v=>{c[v]=(c[v]||0)+1;if(c[v]>=n){n=c[v];b=v}});return b==null?null:{v:b,n}};
+function rg(id,i,v,u,cur,n,tot){return '<button class="rg'+(cur==v?' ok':'')+'" onclick="setq(\''+id+'\','+i+','+v+')">'+(cur==v?'✓ ':'')+'רגיל: '+nf(v)+' '+u+' ('+n+'/'+tot+')</button>'}
+function setq(id,i,v){const p=prod(id),e=ent(id);if(i<0)e.q=v;else e.vs[p.v[i]]=v;save();list()}
+function due(){const H=S.hist.slice(-10),out={};if(H.length<10)return out;const now=new Date(today()),M={};const Q={};H.forEach(x=>x.items.forEach(it=>{(M[it.id]=M[it.id]||[]).push(x.d);(Q[it.id]=Q[it.id]||[]).push(it)}));Object.keys(M).forEach(id=>{const ds=M[id];if(ds.length<2||!prod(id))return;const avg=(new Date(ds[ds.length-1])-new Date(ds[0]))/864e5/(ds.length-1);if(avg<=0)return;const days=Math.round((now-new Date(ds[ds.length-1]))/864e5),r=days/avg;const p=prod(id),qs=Q[id];let qm=null,vm=null;if(p.v.length){vm={};p.v.forEach(v=>{const m=mode(qs.map(i=>i.vs&&i.vs[v]).filter(x=>x>0));if(m&&m.n>=2)vm[v]=m})}else{const m=mode(qs.map(i=>i.q!=null?i.q:i.t).filter(x=>x>0));if(m&&m.n>=2)qm=m}out[id]={days,avg,n:ds.length,r,lvl:r>=1?2:r>=.75?1:0,qm,vm}});return out}
+function shop(){return '<input class="se" placeholder="חיפוש מוצר…" value="'+esc(q)+'" oninput="q=this.value;window.list()"><div id="dn"></div><div id="ls"></div>'}
+function list(){const f=q.trim(),D=due(),L=Object.values(D),n2=L.filter(x=>x.lvl==2).length,n1=L.filter(x=>x.lvl==1).length,OD=od&&n1+n2>0;let h='';S.cats.forEach(c=>{const ps=S.prods.filter(p=>p.cat==c&&(!f||p.name.includes(f)||p.v.some(v=>v.includes(f)))&&(!OD||(D[p.id]&&D[p.id].lvl>0)));if(!ps.length)return;h+='<h3>'+esc(c)+'</h3>';ps.forEach(p=>{const e=S.sel[p.id]||{q:0,vs:{},n:''};const d=D[p.id];h+='<div class="it'+(isSel(e)?' on':'')+(d&&d.lvl==2?' due':d&&d.lvl==1?' soon':'')+'"><div class="hd"><b>'+esc(p.name)+'</b><button class="nb'+(e.n?' has':'')+'" onclick="nt(\''+p.id+'\')">✎ הערה</button></div>'+(d&&d.lvl?'<div class="bg">'+(d.lvl==2?'⏰ הגיע הזמן':'בקרוב')+' · עברו '+d.days+' ימים, בממוצע כל '+nf(d.avg)+' (נקנה '+d.n+' פעמים)</div>':'');if(p.v.length)p.v.forEach((v,i)=>{const m=d&&d.lvl&&d.vm&&d.vm[v];h+='<div class="vr"><span>'+esc(v)+(m?' '+rg(p.id,i,m.v,p.unit,e.vs[v],m.n,d.n):'')+'</span>'+stp(p.id,i,e.vs[v]||0,p.unit)+'</div>'});else{h+=stp(p.id,-1,e.q,p.unit);if(d&&d.lvl&&d.qm)h+=rg(p.id,-1,d.qm.v,p.unit,e.q,d.qm.n,d.n)};if(open[p.id]||e.n)h+='<input class="ni" data-n="'+p.id+'" placeholder="הערה (תופיע בוואטסאפ)" value="'+esc(e.n||'')+'" oninput="sn(\''+p.id+'\',this.value)">';h+='</div>'})});$('dn').innerHTML=n1+n2?'<div class="dn"><span>⏰ '+(n2?n2+' מוצרים שהגיע הזמן לקנות':'אין מוצרים שהגיע זמנם')+(n1?' · '+n1+' בקרוב':'')+'</span><button onclick="od=!od;list()">'+(OD?'הצג הכל':'רק מומלצים')+'</button></div>':'<p class="mu" style="font-size:13px;margin:8px 4px 0">'+(S.hist.length<10?'ההמלצות יתחילו אחרי 10 קניות שמורות (נשמרו '+S.hist.length+' מתוך 10).':'אין עדיין מוצר שנקנה לפחות פעמיים ב-10 הקניות האחרונות.')+'</p>';$('ls').innerHTML=h||'<p class="mu">לא נמצאו מוצרים</p>';bar()}
+function bar(){const b=$('bar'),n=cnt();if(tab!='shop'||!n){b.style.display='none';return}b.style.display='flex';b.innerHTML='<span>'+n+' מוצרים נבחרו</span><button class="pri" onclick="wa()">שתף בוואטסאפ</button><button onclick="sv()">שמור קנייה</button><button onclick="cp()">העתק</button><button onclick="clr()">נקה</button>'}
+function detail(p,e){if(p.v.length)return p.name+': '+p.v.filter(v=>e.vs[v]).map(v=>v+' '+nf(e.vs[v])+' '+p.unit).join(', ');return p.name+' – '+nf(e.q)+' '+p.unit}
+function txt(){const o=['🛒 *רשימת קניות* – '+new Date().toLocaleDateString('he-IL')];S.cats.forEach(c=>{const ls=[];S.prods.filter(p=>p.cat==c&&isSel(S.sel[p.id])).forEach(p=>{const e=S.sel[p.id];ls.push('• '+detail(p,e)+(e.n?'\n    ↳ '+e.n:''))});if(ls.length)o.push('','*'+c+'*',...ls)});return o.join('\n')}
+function wa(){const t=txt(),e=encodeURIComponent(t);try{navigator.clipboard.writeText(t).catch(()=>{})}catch(x){}if(e.length>4000){if(navigator.share){navigator.share({text:t}).catch(()=>{});return}window.open('https://wa.me/','_blank');toast('הרשימה ארוכה – הועתקה, הדבק בוואטסאפ');return}const w=window.open('https://wa.me/?text='+e,'_blank');if(!w)toast('הרשימה הועתקה – הדבק בוואטסאפ')}
+function cp(){try{navigator.clipboard.writeText(txt()).then(()=>toast('הרשימה הועתקה'),()=>toast('ההעתקה נכשלה'))}catch(e){toast('ההעתקה נכשלה')}}
+function clr(){modal('<h2>לנקות את הבחירה?</h2><p class="mu">כל הסימונים וההערות יימחקו.</p>',()=>{S.sel={};open={};save();list()},'נקה')}
+function sv(){modal('<h2>שמירת קנייה</h2><label class="mu">מחיר כולל (₪)</label><input id="s1" type="number" inputmode="decimal" min="0" step="0.01" placeholder="לדוגמה 842.50"><label class="mu">תאריך הקנייה</label><input id="s2" type="date" value="'+today()+'">',()=>{const raw=$('s1').value.trim(),price=raw===''?null:parseFloat(raw),d=$('s2').value;if(!d){toast('חסר תאריך');return false}if(raw!==''&&(isNaN(price)||price<0)){toast('מחיר לא תקין');return false}const items=S.prods.filter(p=>isSel(S.sel[p.id])).map(p=>{const e=S.sel[p.id];const t=p.v.length?Object.values(e.vs).reduce((a,b)=>a+b,0):e.q;return{id:p.id,name:p.name,u:p.unit,t,d:detail(p,e),q:e.q,vs:{...e.vs}}});S.hist.push({d,price,items});S.hist.sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);S.sel={};open={};save();list();toast('הקנייה נשמרה')},'שמור')}
+function manage(){let h='<button class="pri big" onclick="addP()">＋ הוספת מוצר</button><div class="row"><button onclick="exp()">ייצוא גיבוי</button><label class="btn">ייבוא גיבוי<input type="file" accept=".json,application/json" hidden onchange="imp(this)"></label></div><p class="mu" style="font-size:13px;margin:0">הנתונים נשמרים בזיכרון האפליקציה במכשיר בלבד.</p>';S.cats.forEach(c=>{const ps=S.prods.filter(p=>p.cat==c);h+='<h3>'+esc(c)+' <small class="mu">('+ps.length+')</small></h3>';ps.forEach(p=>{h+='<div class="mr"><span>'+esc(p.name)+(p.v.length?' <small class="mu">('+esc(p.v.join(', '))+')</small>':'')+' <small class="mu">· '+p.unit+'</small></span><button class="x" onclick="dp(\''+p.id+'\')">✕</button></div>'})});return h}
+function addP(){modal('<h2>מוצר חדש</h2><input id="a1" placeholder="שם המוצר"><label class="mu">קטגוריה</label><select id="a2">'+S.cats.map(c=>'<option>'+esc(c)+'</option>').join('')+'<option value="__n">＋ קטגוריה חדשה…</option></select><input id="a3" placeholder="שם הקטגוריה החדשה" style="display:none"><label class="mu">יחידת מידה</label><select id="a4">'+['יח׳','אריזות','ק״ג','גרם','ליטר'].map(u=>'<option>'+u+'</option>').join('')+'</select><input id="a5" placeholder="אפשרויות לבחירה, מופרדות בפסיק (לא חובה)">',()=>{const name=$('a1').value.trim();if(!name){toast('חסר שם מוצר');return false}let cat=$('a2').value;if(cat=='__n'){cat=$('a3').value.trim();if(!cat){toast('חסר שם קטגוריה');return false}if(!S.cats.includes(cat))S.cats.push(cat)}const v=$('a5').value.split(',').map(x=>x.trim()).filter(Boolean);S.prods.push({id:'u'+Date.now(),name,cat,unit:$('a4').value,v});save();render();toast('המוצר נוסף')},'הוסף');$('a2').onchange=function(){$('a3').style.display=this.value=='__n'?'block':'none'}}
+function dp(id){const p=prod(id);modal('<h2>למחוק את “'+esc(p.name)+'”?</h2><p class="mu">היסטוריית קניות קיימת לא תימחק.</p>',()=>{S.prods=S.prods.filter(x=>x.id!=id);delete S.sel[id];save();render()},'מחק')}
+function exp(){try{const b=new Blob([JSON.stringify(S)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='hasal-backup-'+today()+'.json';document.body.appendChild(a);a.click();a.remove()}catch(e){toast('הייצוא נכשל')}}
+function imp(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.prods||!d.cats||!d.hist)throw 0;S=d;S.sel=S.sel||{};save();render();toast('הגיבוי נטען')}catch(e){toast('קובץ גיבוי לא תקין')}};r.readAsText(f);inp.value=''}
+function dt(i){modal('<h2>למחוק את הקנייה מ-'+hd(S.hist[i].d)+'?</h2>',()=>{S.hist.splice(i,1);save();render()},'מחק')}
+function stats(){const H=S.hist,n=H.length;if(!n)return '<p class="mu" style="margin-top:20px">אין עדיין קניות שמורות. אחרי הקנייה הראשונה לחצו ״שמור קנייה״ בלשונית קנייה, וכאן יופיעו הממוצעים.</p>';
+const P=H.map(x=>x.price).filter(x=>x!=null),np=P.length,sum=P.reduce((a,b)=>a+b,0),m=np?sum/np:null,sd=np>1?Math.sqrt(P.reduce((a,b)=>a+(b-m)*(b-m),0)/(np-1)):null;
+const G=[];for(let i=1;i<n;i++)G.push((new Date(H[i].d)-new Date(H[i-1].d))/864e5);const g=G.length?G.reduce((a,b)=>a+b,0)/G.length:null;
+let h='<div class="sum"><div><b>'+n+'</b><small>קניות שנשמרו</small></div><div><b>'+(m==null?'—':'₪'+nf(m))+'</b><small>ממוצע לקנייה (n='+np+')</small></div><div><b>'+(g==null?'—':nf(g)+' ימים')+'</b><small>מרווח ממוצע בין קניות</small></div><div><b>'+(sd==null?'—':'₪'+nf(sd))+'</b><small>סטיית תקן של המחיר</small></div></div>';
+if(n<5)h+='<p class="mu" style="font-size:13px">מדגם קטן (n='+n+'): הממוצעים לא יציבים ואין מספיק נתונים להסקת מגמה.</p>';
+const M={};H.slice(-10).forEach(x=>x.items.forEach(it=>{const o=M[it.id]||(M[it.id]={name:it.name,u:it.u,c:0,t:0,f:x.d,l:x.d});o.c++;o.t+=it.t;o.l=x.d;o.name=it.name}));
+const R=Object.values(M).sort((a,b)=>b.c-a.c||(a.name<b.name?-1:1));
+h+='<h3>לפי מוצר (10 הקניות האחרונות)</h3><div class="sc"><table><tr><th>מוצר</th><th>פעמים</th><th>אחרונה</th><th>כל כמה ימים</th><th>כמות ממוצעת</th></tr>'+R.map(o=>'<tr><td>'+esc(o.name)+'</td><td>'+o.c+'</td><td>'+hd(o.l)+'</td><td>'+(o.c>1?nf((new Date(o.l)-new Date(o.f))/864e5/(o.c-1)):'—')+'</td><td>'+nf(o.t/o.c)+' '+esc(o.u)+'</td></tr>').join('')+'</table></div>';
+h+='<h3>היסטוריית קניות</h3>';for(let i=n-1;i>=0;i--){const x=H[i];h+='<div class="mr"><span>'+hd(x.d)+' · '+(x.price==null?'ללא מחיר':'₪'+nf(x.price))+' · '+x.items.length+' מוצרים</span><button class="x" onclick="dt('+i+')">✕</button></div>'}
+return h+'<p class="mu" style="font-size:13px">ממוצע ״כל כמה ימים״ = (תאריך אחרון − ראשון) ÷ (מספר הפעמים − 1), מוצג רק ממוצר שנקנה לפחות פעמיים. כמות ממוצעת = סך הכמות ÷ מספר הפעמים שנקנה.<br>המלצה: מוצר שנקנה לפחות פעמיים ב-10 הקניות האחרונות מסומן ״הגיע הזמן״ כשעבר מהקנייה האחרונה שלו לפחות הזמן הממוצע בין קניותיו, ו״בקרוב״ מעל 75% ממנו. נדרשות לפחות 10 קניות שמורות. ״רגיל״ = הכמות שנקנתה הכי הרבה פעמים (בשוויון, העדכנית); המספרים בסוגריים = כמה פעמים נקנתה הכמות הזו מתוך כמה פעמים נקנה המוצר, ומוצגת רק אם נקנתה כך לפחות פעמיים. המעקב ברמת המוצר, לא ברמת האפשרות.</p>'}
+function render(){$('main').innerHTML=tab=='shop'?shop():tab=='manage'?manage():stats();if(tab=='shop')list();else bar();document.querySelectorAll('.tb2 button').forEach(b=>b.classList.toggle('a',b.dataset.t==tab))}
+render();
+</script>
+</body>
+</html>
