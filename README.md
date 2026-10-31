@@ -1,1 +1,0 @@
-# Hasal-shel-ima
